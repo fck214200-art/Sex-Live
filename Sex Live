@@ -1,0 +1,197 @@
+!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEX LIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .active-tab {
+            border-bottom: 4px solid white;
+            opacity: 1;
+        }
+
+        .message-bubble {
+            max-width: 80%;
+            padding: 10px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        #ad-container {
+            height: 53px;
+            background: #fff;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col overflow-hidden" onload="initApp()">
+
+    <div id="ad-container">
+        <div id="container-c785276e742101f8014e9132c9f47c4a"></div>
+        <script async="async" data-cfasync="false" src="https://pl28238596.effectivegatecpm.com/c785276e742101f8014e9132c9f47c4a/invoke.js"></script>
+    </div>
+
+    <nav class="bg-gradient-to-r from-pink-600 to-purple-700 p-4 text-white shadow-xl">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="text-2xl font-black italic uppercase">SEX LIVE</h1>
+            <div class="flex gap-4 items-center">
+                <button onclick="startCallWithAd('audio')"><i class="fas fa-phone-alt text-lg text-green-300"></i></button>
+                <button onclick="startCallWithAd('video')"><i class="fas fa-video text-lg text-blue-300"></i></button>
+
+                <div class="flex items-center gap-1 bg-black/30 px-3 py-1.5 rounded-full border border-white/20">
+                    <span class="text-[12px] font-black">৳ <span id="navBalance">0.00</span></span>
+                    <i onclick="switchTab('wallet')" class="fas fa-wallet text-yellow-400 text-sm cursor-pointer ml-1"></i>
+</div>
+            </div>
+        </div>
+        <div class="flex justify-around text-[10px] font-bold uppercase">
+            <button onclick="switchTab('chat')" id="chatTab" class="pb-1 active-tab">মেসেঞ্জার</button>
+            <button onclick="switchTab('wallet')" id="walletTab" class="pb-1 opacity-60">ওয়ালেট ও রেফার</button>
+        </div>
+    </nav>
+
+    <main id="chatSection" class="flex-1 flex flex-col overflow-hidden bg-white">
+        <div id="msgDisplay" class="flex-1 overflow-y-auto p-4 flex flex-col bg-gray-50">
+            <div class="text-center mb-4">
+                <span class="text-[10px] text-gray-400 uppercase tracking-widest">🔒 ব্যক্তিগত ও গোপন চ্যাট</span>
+                <p id="myIdDisplay" class="text-pink-600 font-bold text-[11px] mt-1"></p>
+            </div>
+        </div>
+        <div class="p-3 bg-white border-t flex items-center gap-2">
+            <input type="text" id="userInput" placeholder="গোপন মেসেজ..." class="flex-1 bg-gray-100 rounded-full px-5 py-2.5 outline-none text-sm">
+            <button onclick="handleSendMessage()" class="bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </main>
+
+    <main id="walletSection" class="hidden flex-1 p-4 overflow-y-auto bg-gray-50">
+        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-4 text-white shadow-md mb-4 text-center">
+            <h3 class="text-sm font-bold uppercase mb-1">বন্ধুকে শেয়ার করুন</h3>
+            <p class="text-[10px] mb-3">প্রতি সফল রেফারে ২০ টাকা বোনাস!</p>
+            <div class="flex gap-2">
+                <input type="text" id="refLinkInput" readonly class="flex-1 text-[10px] p-2 bg-white/20 border border-white/30 rounded outline-none text-white">
+                <button onclick="copyRefLink()" class="bg-white text-orange-600 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">কপি</button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 shadow-sm border-t-4 border-pink-500 text-center mb-4">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">ব্যালেন্স</p>
+            <p class="text-4xl font-black text-pink-600 mb-5">৳ <span id="mainBalance">0.00</span></p>
+
+            <div class="bg-gray-800 rounded-xl p-4 text-white text-left">
+                <h4 class="text-[10px] font-bold text-pink-400 uppercase mb-3 text-center tracking-widest">টাকা উত্তোলন (Withdraw)</h4>
+                <input type="number" id="wNum" onclick="showAdDirect()" placeholder="বিকাশ/নগদ নম্বর দিন" class="w-full bg-gray-700 p-2.5 rounded-lg text-xs mb-3 border-none outline-none">
+                <input type="number" id="wAmt" placeholder="ন্যূনতম ৫০০ টাকা" class="w-full bg-gray-700 p-2.5 rounded-lg text-xs mb-4 border-none outline-none">
+                <button onclick="processWithdraw()" class="w-full bg-pink-600 py-3 rounded-xl font-bold uppercase text-xs">রিকোয়েস্ট পাঠান</button>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm text-[10px]">
+            <p class="mb-1 text-gray-600">📞 অডিও কল (৩ মিনিট): ৳ ৫.০০</p>
+            <p class="text-gray-600">📹 ভিডিও কল (৩ মিনিট): ৳ ১০.০০</p>
+        </div>
+    </main>
+
+    <div id="callUI" class="hidden fixed inset-0 bg-black/95 z-[100] flex flex-col items-center justify-center text-white p-6">
+        <div class="text-pink-500 text-sm font-bold uppercase mb-4" id="callStatus">কল চলছে...</div>
+        <div id="timer" class="text-6xl font-mono font-black mb-12">০০:০০</div>
+        <button onclick="stopCall()" class="bg-red-600 w-20 h-20 rounded-full flex items-center justify-center text-3xl shadow-2xl active:scale-90 transition">
+            <i class="fas fa-phone-slash"></i>
+        </button>
+    </div>
+
+    <script src="https://pl28238585.effectivegatecpm.com/aa/fb/e7/aafbe7b996207108e07860da598fdf5d.js"></script>
+
+    <script>
+        let balance = 0.00;
+        let sec = 0;
+        let timerInt;
+        let currentCallType = '';
+        const adLink = "https://www.profitablecpmrate.com/your_direct_link"; // আপনার Direct Link এখানে বসান
+
+        function initApp() {
+            window.open(adLink, '_blank'); // অ্যাপ ওপেনে অ্যাড
+            const myId = "SL-" + Math.random().toString(36).substr(2, 5).toUpperCase();
+            document.getElementById('myIdDisplay').innerText = "আপনার আইডি: " + myId;
+            document.getElementById('refLinkInput').value = window.location.origin + "/share?ref=" + myId;
+        }
+
+        function showAdDirect() {
+            window.open(adLink, '_blank'); // বিকাশ নম্বরে অ্যাড
+        }
+
+        function switchTab(tab) {
+            if (tab === 'chat') {
+                window.open(adLink, '_blank'); // মেসেঞ্জারে ঢুকলে অ্যাড
+            }
+            document.getElementById('chatSection').style.display = (tab === 'chat') ? 'flex' : 'none';
+            document.getElementById('walletSection').style.display = (tab === 'wallet') ? 'block' : 'none';
+            document.getElementById('chatTab').className = (tab === 'chat') ? 'pb-1 active-tab' : 'pb-1 opacity-60';
+            document.getElementById('walletTab').className = (tab === 'wallet') ? 'pb-1 active-tab' : 'pb-1 opacity-60';
+        }
+
+        // অডিও ও ভিডিও কলে অ্যাড নিশ্চিত করার জন্য নতুন ফাংশন
+        function startCallWithAd(type) {
+            window.open(adLink, '_blank'); // কল বাটনে ক্লিক করলে অ্যাড
+            currentCallType = type;
+            document.getElementById('callStatus').innerText = (type === 'audio' ? 'অডিও কল চলছে...' : 'ভিডিও কল চলছে...');
+            document.getElementById('callUI').classList.remove('hidden');
+            sec = 0;
+            timerInt = setInterval(() => {
+                sec++;
+                let m = Math.floor(sec / 60);
+                let s = sec % 60;
+                document.getElementById('timer').innerText = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+            }, 1000);
+        }
+
+        function stopCall() {
+            clearInterval(timerInt);
+            document.getElementById('callUI').classList.add('hidden');
+            if (sec >= 180) {
+                let bonus = currentCallType === 'audio' ? 5.00 : 10.00;
+                balance += bonus;
+                document.getElementById('navBalance').innerText = balance.toFixed(2);
+                document.getElementById('mainBalance').innerText = balance.toFixed(2);
+                alert("আপনার ব্যালেন্সে ৳" + bonus + " যোগ হয়েছে!");
+            } else {
+                alert("টাকা পেতে ৩ মিনিট কথা বলতে হবে।");
+            }
+        }
+
+        function handleSendMessage() {
+            const input = document.getElementById('userInput');
+            if (input.value.trim() !== "") {
+                const bubble = document.createElement('div');
+                bubble.className = "message-bubble bg-pink-600 text-white self-end shadow-md";
+                bubble.innerText = input.value;
+                document.getElementById('msgDisplay').appendChild(bubble);
+                input.value = "";
+                document.getElementById('msgDisplay').scrollTop = document.getElementById('msgDisplay').scrollHeight;
+            }
+        }
+
+        function copyRefLink() {
+            const copyText = document.getElementById('refLinkInput');
+            copyText.select();
+            document.execCommand("copy");
+            alert("রেফারেল লিঙ্ক কপি হয়েছে!");
+        }
+
+        function processWithdraw() {
+            alert("উত্তোলন রিকোয়েস্ট সফল হয়েছে।");
+        }
+    </script>
+</body>
+
+</html>
