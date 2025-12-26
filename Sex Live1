@@ -1,0 +1,151 @@
+public/
+ ├─ index.html
+ ├─ firebase.js
+ ├─ router.js
+ ├─ ads.js
+ ├─ chat.js
+ ├─ app.js
+ └─ pages/
+     ├─ login.html
+     ├─ chat.html
+     ├─ wallet.html
+     ├─ withdraw.html
+     └─ admin.html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Sex Live</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- TOP BANNER AD -->
+<div id="topAd">
+<script src="https://pl28238576.effectivegatecpm.com/29/c2/99/29c29906b1f308c8b20ea53f898c6400.js"></script>
+</div>
+
+<!-- APP CONTENT -->
+<div id="app" class="p-3"></div>
+
+<!-- AD BOX -->
+<div id="adBox"></div>
+
+<script src="/firebase.js"></script>
+<script src="/router.js"></script>
+<script src="/ads.js"></script>
+<script src="/chat.js"></script>
+<script src="/app.js"></script>
+
+</body>
+</html>
+// firebase.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "sexlive.firebaseapp.com",
+  projectId: "sexlive",
+  storageBucket: "sexlive.appspot.com",
+  messagingSenderId: "XXXX",
+  appId: "XXXX"
+};
+
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+// router.js
+function loadPage(page){
+  fetch(`/pages/${page}.html`)
+    .then(r => r.text())
+    .then(html => document.getElementById("app").innerHTML = html);
+}
+
+const routes = {
+  "": "login",
+  "login": "login",
+  "chat": "chat",
+  "wallet": "wallet",
+  "withdraw": "withdraw",
+  "admin": "admin"
+};
+
+const path = location.pathname.replace("/", "");
+loadPage(routes[path] || "login");
+// router.js
+function loadPage(page){
+  fetch(`/pages/${page}.html`)
+    .then(r => r.text())
+    .then(html => document.getElementById("app")pp").innerHTML = ht
+
+
+const routes = {
+  "": "utes =
+  "login": "login",
+  "chat": "chat",
+  "wallet": "wallet",
+  "withdraw": "withdraw",
+  "admin": "admin"
+};
+
+const path = location.pathname.replace("/", "");
+
+l "login")
+
+// chat.js
+let msgCount = 0;
+
+function sendMessage(){
+  msgCount++;
+
+  // প্রতি ৩ মেসেজে অ্যাড
+  if(msgCount % 3 === 0){
+    showAd();
+  }
+
+  console.log("Message sent");
+}
+// ads.js
+function showAd(){
+  document.getElementById("adBox").innerHTML = `
+<script async src="https://www.highperformanceformat.com/ad5fc4a38ce907ff33fa6922bce9a57a/invoke.js"></script>
+`;
+}
+// app.js
+let balance = 0;
+
+function addBalance(amount){
+  balance += amount;
+  console.log("Balance:", balance);
+}
+
+function withdraw(){
+  if(balance >= 500){
+    alert("Withdraw request sent!");
+  } else {
+    alert("Minimum 500 টাকা লাগবে");
+  }
+}<h2 class="text-xl font-bold mb-3">Chat</h2>
+<input id="msg" class="border p-2 w-full" placeholder="Message লিখুন">
+<button onclick="sendMessage()" class="bg-blue-600 text-white px-4 py-2 mt-2">
+Send
+</button>
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      { "source": "**", "destination": "/index.html" }
+    ]
+  }
+}firebase deploy
+https://sexlive.web.app
+
+
+
+
+
+
+
